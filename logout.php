@@ -1,0 +1,9 @@
+<?php
+
+session_start();
+session_unset();
+session_destroy();
+
+// Redirect ke halaman login atau halaman lainnya setelah logout
+header("Location: /");
+exit();
