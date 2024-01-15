@@ -42,3 +42,5 @@ route('POST', '/permission/{id}', 'editPermissionProses');
 // user Controller
 route('GET', '/kegiatan/{id}', 'kegiatanController');
 route('GET', '/alumni', 'alumniController');
+route('GET', '/cetak-kartu', 'cetakKartuController');
+route('POST', '/cetak-kartu/{id}', 'cetakKartuProses');

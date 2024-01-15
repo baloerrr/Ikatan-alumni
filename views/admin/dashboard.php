@@ -4,6 +4,12 @@ include('./config/utils.php');
 push('css', '<link rel="stylesheet" href="/public/css/admin.css">');
 push('js', '<script src="/public/js/admin.js"></script>');
 
+$sql = "SELECT COUNT(*) as jumlah_user FROM user";
+$stmt = $pdo->query($sql);
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+$jumlahUser = $result['jumlah_user'];
+
 ?>
 <div class="wrapper">
     <?php include('./views/admin/partials/sidebar.php') ?>
@@ -21,13 +27,13 @@ push('js', '<script src="/public/js/admin.js"></script>');
                         <div class="card flex-fill border-0 illustration">
                             <div class="card-body p-0 d-flex flex-fill">
                                 <div class="p-3 m-1">
-                                    <h4>Welcome Back, Admin</h4>
-                                    <p class="mb-0">Admin Dashboard, CodzSword</p>
+                                    <h4>Jumlah User</h4>
+                                    <p class="mb-0 fw-medium fs-5"><?= $jumlahUser ?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 d-flex">
+                    <!-- <div class="col-12 col-md-6 d-flex">
                         <div class="card flex-fill border-0">
                             <div class="card-body py-4">
                                 <div class="d-flex align-items-start">
@@ -42,7 +48,7 @@ push('js', '<script src="/public/js/admin.js"></script>');
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </main>

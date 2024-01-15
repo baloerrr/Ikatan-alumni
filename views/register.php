@@ -4,14 +4,13 @@
             <div class="row gx-lg-5 align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <h1 class="my-5 display-3 fw-bold ls-tight">
-                        The best offer <br />
-                        <span class="text-primary">for your business</span>
+                        Ikatan Alumni<br />
+                        <span class="text-primary">SMK Negeri Sumsel</span>
                     </h1>
                     <p style="color: hsl(217, 10%, 50.8%)">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-                        quibusdam tempora at cupiditate quis eum maiores libero
-                        veritatis? Dicta facilis sint aliquid ipsum atque?
+                        Ikatan Alumni Sumsel mengundang seluruh alumni untuk berkumpul dalam kebersamaan yang penuh
+                        kenangan. Acara ini akan menjadi momentum spesial untuk membagikan cerita, memperbarui hubungan,
+                        dan merayakan pencapaian bersama.
                     </p>
                 </div>
 

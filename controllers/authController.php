@@ -80,13 +80,11 @@ function registerProses()
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $level = "user";
 
-        // File upload handling
         $targetDir = "./public/images/"; // Adjust the target directory as needed
         $targetFile = $targetDir . basename($_FILES["foto"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
-        // Check if image file is a actual image or fake image
         $check = getimagesize($_FILES["foto"]["tmp_name"]);
         if ($check !== false) {
             $uploadOk = 1;

@@ -105,7 +105,59 @@ include('./routes/web.php');
 
             reader.readAsDataURL(input.files[0]);
         }
+
+        function submitForm() {
+            // Lakukan sesuatu sebelum submit jika diperlukan
+            document.getElementById("form-id").submit(); // Ganti "form-id" dengan ID form Anda
+        }
+
+        function downloadCard() {
+            var cardElement = document.getElementById('card1-id');
+
+            html2canvas(cardElement, {
+                scale: 0.7
+            }).then(function(canvas) {
+                // Mengonversi canvas menjadi data URL gambar JPEG
+                var imgData = canvas.toDataURL('image/jpeg');
+
+                // Membuat elemen a untuk mengunduh gambar
+                var a = document.createElement('a');
+                a.href = imgData;
+                a.download = 'kartu-depan.jpg';
+
+                // Menambahkan elemen a ke body dan melakukan klik untuk mengunduh
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        }
+
+        function downloadCard2() {
+            var cardElement = document.getElementById('card2-id'); // Ganti ID sesuai kebutuhan
+
+            html2canvas(cardElement, {
+                scale: 0.7
+            }).then(function(canvas) {
+                // Mengonversi canvas menjadi data URL gambar JPEG
+                var imgData = canvas.toDataURL('image/jpeg');
+
+                // Membuat elemen a untuk mengunduh gambar
+                var a = document.createElement('a');
+                a.href = imgData;
+                a.download = 'kartu-belakang.jpg';
+
+                // Menambahkan elemen a ke body dan melakukan klik untuk mengunduh
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        }
     </script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+
     <script>
         ClassicEditor
             .create(document.querySelector('#content'))
